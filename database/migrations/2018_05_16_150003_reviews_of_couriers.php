@@ -16,8 +16,8 @@ class ReviewsOfCouriers extends Migration
         Schema::create('reviews_of_couriers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('passport_number');
-            $table->string('reviews_text');
+            $table->string('review_text');
+            $table->date('date_of_birth');
             $table->timestamps();
         });
     }
