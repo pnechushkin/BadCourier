@@ -1,6 +1,7 @@
 const elixir = require('laravel-elixir');
 
-require('laravel-elixir-vue-2');
+// require('laravel-elixir-vue-2');
+
 
 /*
  |--------------------------------------------------------------------------
@@ -22,10 +23,28 @@ require('laravel-elixir-vue-2');
 //     mix.stylus('app.styl');
 // });
 elixir(function(mix) {
+
+    mix.copy('node_modules/bootstrap/dist/css/bootstrap.css', 'resources/assets/css/bootstrap/bootstrap.css');
+    mix.copy('node_modules/bootstrap/dist/js/bootstrap.js', 'resources/assets/js/bootstrap/bootstrap.js');
+    mix.copy('node_modules/bootstrap/dist/js/bootstrap.js', 'public/js/jquery.js');
+    mix.copy('node_modules/jquery-datepicker/jquery-datepicker.js', 'public/js/jquery-datepicker.js');
+    mix.copy('node_modules/bootstrap-datetimepicker/src/less/', 'resources/assets/less/');
+    mix.copy('node_modules/bootstrap-datetimepicker/src/js/', 'resources/assets/js/datepicker/');
+    mix.copy('node_modules/bootstrap-datetimepicker/src/js/', 'public/js//datepicker/');
     mix.styles([
+        '/bootstrap/bootstrap.css',
+        // '/jquery-ui/datepicker.css',
         'styles.css'
     ], 'public/css/site.css');
     mix.webpack([
+        '/datepicker/bootstrap-datetimepicker.js',
         'main.js'
-    ], 'public/js/site.js');
+    ], 'public/js/main.js');
+    // mix.webpack([
+    // '/bootstrap/bootstrap.js',
+    // ], 'public/js/bootstrap.js');
+    mix.webpack('app.js');
+    // elixir(function(mix) {
+    //     mix.less('app.less');
+    // });
 });

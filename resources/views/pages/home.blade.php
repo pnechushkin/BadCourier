@@ -6,8 +6,3 @@
         </div>
     </div>
 @stop
-<script>
-    $(document).ready(function(){
-        console.log('test')
-    });
-</script>

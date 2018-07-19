@@ -44,7 +44,7 @@
 
             <div class="form-group{{ $errors->has('DateBirth') ? ' has-error' : '' }}">
                 <label for="DateBirth" class="col-md-4 control-label">Дата рождения</label>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <input id="DateBirth" type="text" name="DateBirth" value="{{ old('DateBirth') }}">
                     @if ($errors->has('DateBirth'))
                         <span class="help-block">
