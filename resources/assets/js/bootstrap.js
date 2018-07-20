@@ -10,7 +10,11 @@ window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 // require('bootstrap-sass');
 require('bootstrap');
-require('jquery-ui');
+require('jquery-ui/ui/widgets/datepicker.js')
+// require('jquery-ui');
+// require('jquery-datepicker');
+
+
 
 
 /**
